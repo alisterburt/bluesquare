@@ -48,9 +48,14 @@ const BlueSquare: React.FC<GridComponentProps> = ({nx, ny}) => {
       return () => {
         document.removeEventListener('mousemove', throttledMouseHandler);
       };
-    }, [grid]);
+    }, [grid, handleMouseMove]);
 
-  const getClassNameForCell = (x: number, y: number, grid: Grid, selectedCell: {x: numer, y: number}) => {
+  const getClassNameForCell = (
+    x: number,
+    y: number,
+    grid: Grid,
+    selectedCell: { x: number, y: number }
+  ) => {
     let className = 'cell';
 
     if (selectedCell.x === x && selectedCell.y === y) {
