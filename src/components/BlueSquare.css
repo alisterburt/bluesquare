@@ -1,0 +1,38 @@
+.grid-container {
+    display: flex;
+    justify-content: center;
+}
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 28px;
+    height: 28px;
+    border: 1px solid black;
+}
+
+.cell.selected {
+    background-color: dodgerblue; /* Highlight selected cell */
+}
+
+.cell.top {
+    border-top: 2px solid black;
+}
+
+.cell.bottom {
+    border-bottom: 2px solid black;
+}
+
+.cell.left {
+    border-left: 2px solid black;
+}
+
+.cell.right {
+    border-right: 2px solid black;
+}
